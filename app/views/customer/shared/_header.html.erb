@@ -1,0 +1,16 @@
+<header>
+	<%= link_to 'TJ Customer Management System', :customer_root, class: 'logo-mark' %>
+	<%= content_tag(:span, flash.notice, class: 'notice') if flash.notice %>
+	<%= content_tag(:span, flash.alert, class: 'alert') if flash.alert %>
+
+	<%=
+		if current_customer
+			link_to 'Logout', :customer_session, method: :delete
+		else
+			link_to 'Login', :customer_login
+		end
+	%>
+<%= link_to 'アカウント', :customer_account if current_customer %>
+<%= link_to '問い合わせ', :new_customer_message if current_customer %>
+</header>
+
