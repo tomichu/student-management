@@ -1,0 +1,1 @@
+json.array! @staff_record_students, partial: 'staff_record_students/staff_record_student', as: :staff_record_student

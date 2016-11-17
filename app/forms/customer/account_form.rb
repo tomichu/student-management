@@ -1,7 +1,7 @@
 class Customer::AccountForm
   include ActiveModel::Model
 
-  attr_accessor :customer, :inputs_home_address, :inputs_work_address
+  attr_accessor :customer, :inputs_home_address, :inputs_work_address, :inputs_manage_student
   delegate :persisted?, :valid?, :save, to: :customer
 
   def initialize(customer = nil)
@@ -10,8 +10,10 @@ class Customer::AccountForm
     (2 - @customer.personal_phones.size).times do
       @customer.personal_phones.build
     end
+    self.inputs_manage_student = @customer.manage_student.present?
     self.inputs_home_address = @customer.home_address.present?
     self.inputs_work_address = @customer.work_address.present?
+    @customer.build_manage_student unless @customer.manage_student
     @customer.build_home_address unless @customer.home_address
     @customer.build_work_address unless @customer.work_address
     (2 - @customer.home_address.phones.size).times do
@@ -38,6 +40,10 @@ class Customer::AccountForm
         customer.personal_phones[index].mark_for_destruction
       end
     end
+		
+		if inputs_manage_student
+      customer.home_address.assign_attributes(home_address_params)
+		end
 
     if inputs_home_address
       customer.home_address.assign_attributes(home_address_params)

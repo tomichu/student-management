@@ -7,6 +7,10 @@ class CreateCustomers < ActiveRecord::Migration
 			t.string :given_name, null: false
 			t.string :family_name_kana, null: false
 			t.string :given_name_kana, null: false
+			t.string :ennea
+			t.string :going_school
+			t.string :grade
+			t.string :preferred_school
 			t.string :gender
 			t.date :birthday
 			t.string :hashed_password

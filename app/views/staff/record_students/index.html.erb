@@ -1,0 +1,35 @@
+<h1>Listing staff_record_students</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Ennea</th>
+      <th>Textbook</th>
+      <th>Going school</th>
+      <th>Created at</th>
+      <th>Updated at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @staff_record_students.each do |staff_record_student| %>
+      <tr>
+        <td><%= staff_record_student.title %></td>
+        <td><%= staff_record_student.ennea %></td>
+        <td><%= staff_record_student.textbook %></td>
+        <td><%= staff_record_student.going_school %></td>
+        <td><%= staff_record_student.created_at %></td>
+        <td><%= staff_record_student.updated_at %></td>
+        <td><%= link_to 'Show', staff_record_student %></td>
+        <td><%= link_to 'Edit', edit_staff_record_student_path(staff_record_student) %></td>
+        <td><%= link_to 'Destroy', staff_record_student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Record student', new_staff_record_student_path %>

@@ -4,6 +4,7 @@ class Customer < ActiveRecord::Base
 	include PasswordHolder
 
 	has_many :addresses, dependent: :destroy
+	has_many :manage_student
   has_one :home_address, autosave: true
   has_one :work_address, autosave: true
 	has_many :phones, dependent: :destroy

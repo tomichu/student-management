@@ -1,0 +1,18 @@
+current directory: /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/libv8-3.16.14.15/ext/libv8
+/Users/ST/.rbenv/versions/2.1.2/bin/ruby -r ./siteconf20161027-54592-3vnn1z.rb extconf.rb
+creating Makefile
+ln: build/gyp: No such file or directory
+Applying /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/libv8-3.16.14.15/patches/disable-building-tests.patch
+sh: /Users/ST/Library/Mobile: No such file or directory
+/Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/libv8-3.16.14.15/ext/libv8/patcher.rb:15:in `block (2 levels) in patch!': failed to apply patch /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/libv8-3.16.14.15/patches/disable-building-tests.patch (RuntimeError)
+	from /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/libv8-3.16.14.15/ext/libv8/patcher.rb:12:in `each'
+	from /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/libv8-3.16.14.15/ext/libv8/patcher.rb:12:in `block in patch!'
+	from /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/libv8-3.16.14.15/ext/libv8/patcher.rb:8:in `open'
+	from /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/libv8-3.16.14.15/ext/libv8/patcher.rb:8:in `patch!'
+	from /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/libv8-3.16.14.15/ext/libv8/builder.rb:57:in `block in build_libv8!'
+	from /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/libv8-3.16.14.15/ext/libv8/builder.rb:54:in `chdir'
+	from /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/libv8-3.16.14.15/ext/libv8/builder.rb:54:in `build_libv8!'
+	from /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/libv8-3.16.14.15/ext/libv8/location.rb:24:in `install!'
+	from extconf.rb:7:in `<main>'
+
+extconf failed, exit code 1

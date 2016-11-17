@@ -1,0 +1,41 @@
+<%= form_for(@staff_record_student) do |f| %>
+  <% if @staff_record_student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@staff_record_student.errors.count, "error") %> prohibited this staff_record_student from being saved:</h2>
+
+      <ul>
+      <% @staff_record_student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :ennea %><br>
+    <%= f.number_field :ennea %>
+  </div>
+  <div class="field">
+    <%= f.label :textbook %><br>
+    <%= f.text_field :textbook %>
+  </div>
+  <div class="field">
+    <%= f.label :going_school %><br>
+    <%= f.text_field :going_school %>
+  </div>
+  <div class="field">
+    <%= f.label :created_at %><br>
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br>
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

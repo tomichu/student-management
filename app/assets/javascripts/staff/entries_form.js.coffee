@@ -24,4 +24,4 @@ ready = ->
     $('div.button-wrapper form').submit()
 
 $(document).ready(ready)
-$(document).on('page:change')
+$(document).on('page:load')

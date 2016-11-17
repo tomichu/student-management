@@ -37,8 +37,8 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 	config.baukis = {
 		staff: { host: 'baukis.example.com', path: '' },
-		admin: { host: 'baukis.example.com', path: 'admin' },
-		customer: { host: 'example.com', path: 'mypage' },
+		admin: { host: 'baukis.example.com/admin', path: 'admin' },
+		customer: { host: 'baukis.example.com/mypage', path: 'customer' },
 		restrict_ip_addresses: false
 	}
 end

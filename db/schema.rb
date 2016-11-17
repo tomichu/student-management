@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161009052103) do
+ActiveRecord::Schema.define(version: 20161108181555) do
 
   create_table "addresses", force: true do |t|
     t.integer  "customer_id",                null: false
@@ -66,6 +66,10 @@ ActiveRecord::Schema.define(version: 20161009052103) do
     t.string   "given_name",       null: false
     t.string   "family_name_kana", null: false
     t.string   "given_name_kana",  null: false
+    t.string   "ennea"
+    t.string   "going_school"
+    t.string   "grade"
+    t.string   "preferred_school"
     t.string   "gender"
     t.date     "birthday"
     t.string   "hashed_password"
@@ -110,6 +114,17 @@ ActiveRecord::Schema.define(version: 20161009052103) do
   end
 
   add_index "hash_locks", ["table", "column", "key"], name: "index_hash_locks_on_table_and_column_and_key", unique: true, using: :btree
+
+  create_table "manage_students", force: true do |t|
+    t.string   "word"
+    t.string   "grammer"
+    t.string   "reading"
+    t.string   "rapid_reading"
+    t.string   "writing"
+    t.string   "math"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "message_tag_links", force: true do |t|
     t.integer "message_id", null: false
@@ -201,6 +216,20 @@ ActiveRecord::Schema.define(version: 20161009052103) do
 
   add_index "staff_members", ["email_for_index"], name: "index_staff_members_on_email_for_index", unique: true, using: :btree
   add_index "staff_members", ["family_name_kana", "given_name_kana"], name: "index_staff_members_on_family_name_kana_and_given_name_kana", using: :btree
+
+  create_table "staff_record_students", force: true do |t|
+    t.string   "title"
+    t.integer  "ennea"
+    t.string   "textbook"
+    t.string   "going_school"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "students", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tags", force: true do |t|
     t.string "value", null: false

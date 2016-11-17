@@ -1,0 +1,3 @@
+class ManageStudentFormPresenter < FormPresenter
+end
+

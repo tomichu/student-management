@@ -28,4 +28,21 @@ class CustomerPresenter < ModelPresenter
 	def personal_phones
 		object.personal_phones.map(&:number)
 	end
+
+	def ennea
+		object.ennea
+	end
+	
+	def going_school
+		object.going_school
+	end
+	
+	def grade
+		object.grade
+	end
+
+	def preferred_school
+		object.preferred_school
+	end
+
 end

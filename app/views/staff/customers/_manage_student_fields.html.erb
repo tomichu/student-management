@@ -1,0 +1,11 @@
+<%= f.fields_for :manage_student, f.object.customer.manage_student do |ff| %>
+	<%= markup do |m|
+		p = ManageStudentFormPresenter.new(ff, self)
+		p.with_options(required: false) do |q|
+			m << q.drop_down_list_block(:word, '英単語', ManageStudent::WORDS)
+			m << q.drop_down_list_block(:grammer, '英文法', ManageStudent::GRAMMERS)
+		end
+	end %>
+<% end %>
+
+

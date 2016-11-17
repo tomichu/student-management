@@ -1,7 +1,7 @@
 class Staff::CustomerForm
   include ActiveModel::Model
 
-  attr_accessor :customer, :inputs_home_address, :inputs_work_address
+  attr_accessor :customer, :inputs_home_address, :inputs_work_address, :inputs_manage_student
   delegate :persisted?, :save, to: :customer
 
   def initialize(customer = nil)
@@ -10,8 +10,10 @@ class Staff::CustomerForm
     (2 - @customer.personal_phones.size).times do
       @customer.personal_phones.build
     end
+    #self.inputs_manage_student = @customer.manage_student.present?
     self.inputs_home_address = @customer.home_address.present?
     self.inputs_work_address = @customer.work_address.present?
+    #@customer.build_manage_student unless @customer.manage_student
     @customer.build_home_address unless @customer.home_address
     @customer.build_work_address unless @customer.work_address
     (2 - @customer.home_address.phones.size).times do
@@ -24,6 +26,7 @@ class Staff::CustomerForm
 
   def assign_attributes(params = {})
     @params = params
+    #self.inputs_manage_student = params[:inputs_manage_student] == '1'
     self.inputs_home_address = params[:inputs_home_address] == '1'
     self.inputs_work_address = params[:inputs_work_address] == '1'
 
@@ -39,6 +42,14 @@ class Staff::CustomerForm
       end
     end
 
+=begin
+    if inputs_manage_student
+      customer.manage_student.assign_attributes(manage_student_params)
+		else
+			customer.home_address.mark_for_destruction
+    end
+=end
+		
     if inputs_home_address
       customer.home_address.assign_attributes(home_address_params)
 
@@ -54,6 +65,7 @@ class Staff::CustomerForm
     else
       customer.home_address.mark_for_destruction
     end
+
     if inputs_work_address
       customer.work_address.assign_attributes(work_address_params)
 
@@ -76,7 +88,15 @@ class Staff::CustomerForm
     @params.require(:customer).permit(
       :email, :password,
       :family_name, :given_name, :family_name_kana, :given_name_kana,
-      :birthday, :gender
+      :birthday, :gender, :ennea, :going_school, :grade,
+       :preferred_school,
+			:word, :grammer
+    )
+  end
+
+  def manage_student_params
+    @params.require(:manage_student).permit(
+      :word, :grammer
     )
   end
 

@@ -1,0 +1,38 @@
+current directory: /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/mysql2-0.3.21/ext/mysql2
+/Users/ST/.rbenv/versions/2.1.2/bin/ruby -r ./siteconf20161027-42850-upkf13.rb extconf.rb
+checking for ruby/thread.h... yes
+checking for rb_thread_call_without_gvl() in ruby/thread.h... yes
+checking for rb_thread_blocking_region()... yes
+checking for rb_wait_for_single_fd()... yes
+checking for rb_hash_dup()... yes
+checking for rb_intern3()... yes
+-----
+Using mysql_config at /usr/local/mysql/bin/mysql_config
+-----
+checking for mysql.h... yes
+checking for errmsg.h... yes
+checking for mysqld_error.h... yes
+-----
+Setting rpath to /usr/local/mysql/lib
+-----
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/extensions/x86_64-darwin-16/2.1.0-static/mysql2-0.3.21/mkmf.log
+
+current directory: /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/mysql2-0.3.21/ext/mysql2
+make "DESTDIR=" clean
+
+current directory: /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/mysql2-0.3.21/ext/mysql2
+make "DESTDIR="
+compiling client.c
+compiling infile.c
+compiling mysql2_ext.c
+compiling result.c
+linking shared-object mysql2/mysql2.bundle
+
+current directory: /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/mysql2-0.3.21/ext/mysql2
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20161027-42850-nme1q2/mysql2
+installing default mysql2 libraries

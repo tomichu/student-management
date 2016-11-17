@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @staff_record_student.title %>
+</p>
+
+<p>
+  <strong>Ennea:</strong>
+  <%= @staff_record_student.ennea %>
+</p>
+
+<p>
+  <strong>Textbook:</strong>
+  <%= @staff_record_student.textbook %>
+</p>
+
+<p>
+  <strong>Going school:</strong>
+  <%= @staff_record_student.going_school %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @staff_record_student.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @staff_record_student.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_staff_record_student_path(@staff_record_student) %> |
+<%= link_to 'Back', staff_record_students_path %>

@@ -5,8 +5,8 @@ module ErrorHandlers
 		rescue_from Exception, with: :rescue500
 		rescue_from ActionController::BadRequest, with: :rescue400
 		rescue_from ActionController::ParameterMissing, with: :rescue400
-		@<del>{rescue_from ApplicationController::Forbidden, with: :rescue403}
-		@<del>{rescue_from ApplicationController::IpAddressRejected, with: :rescue403}
+		#@<del>{rescue_from ApplicationController::Forbidden, with: :rescue403}
+		#@<del>{rescue_from ApplicationController::IpAddressRejected, with: :rescue403}
 		rescue_from ActionController::RoutingError, with: :rescue404
 		rescue_from ActiveRecord::RecordNotFound, with: :rescue404
 	

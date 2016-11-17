@@ -26,9 +26,9 @@ class Staff::EntriesForm
 			@program.entries.where(id: not_approved_entry_ids).
 				update_all(approved: false)
 			@program.entries.where(id: canceled_entry_ids).
-				update_all(approved: true)
+				update_all(canceled: true)
 			@program.entries.where(id: not_canceled_entry_ids).
-				update_all(approved: false)
+				update_all(canceled: false)
 		end
 	end
 end

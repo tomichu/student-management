@@ -1,0 +1,14 @@
+current directory: /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/json-1.8.3/ext/json
+/Users/ST/.rbenv/versions/2.1.2/bin/ruby -r ./siteconf20161027-42850-1tbi5q.rb extconf.rb
+creating Makefile
+
+current directory: /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/json-1.8.3/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/json-1.8.3/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/ST/Library/Mobile Documents/com~apple~CloudDocs/Documents/projects2/vendor/bundle/gems/json-1.8.3/ext/json
+make "DESTDIR=" install
+installing default libraries

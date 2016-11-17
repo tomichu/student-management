@@ -10,6 +10,7 @@ ja:
         given_name_kana: カナ（名）
         birthday: 生年月日
         gender: 性別
+        ennea: エニアグラム
     errors:
       models:
         customer:
